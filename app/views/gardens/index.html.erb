@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Gardens</h1>
+
+  <h3><%= link_to "add Garde", new_garden_path %></h3>
+
+  <% @gardens.each do |garden| %>
+    <p><%= garden.name %></p>
+    <p><%= garden.image_url %></p>
+    <%= link_to "ver detalle", garden_path(garden) %>
+  <% end %>
+</div>
